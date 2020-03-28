@@ -5,15 +5,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.annotation.ElementType;
 
-
-class Animal
-{
-    private int age;
-    private int weight;
-    private String name;
-    
-    
-    @Target(ElementType.METHOD)
+@Target(ElementType.METHOD)
     @Retention(RetentionPolicy.RUNTIME) 
     @interface AnimalAnnotation
      {
@@ -21,6 +13,11 @@ class Animal
          int weight();
          String name();                
      }
+class Animal
+{
+    private int age;
+    private int weight;
+    private String name;
     
     public int getAge()
     {
